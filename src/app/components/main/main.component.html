@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="main">
+    <input type="file" (change)="fileChangeEvent($event)" class="main__file">
+  
+    <div class="main__cropper">
+      <image-cropper
+      [imageChangedEvent]="imageChangeEvent"
+      [maintainAspectRatio]="true"
+      [resizeToWidth]="128"
+      [resizeToHeight]="128"
+      format="png"
+      (imageCropped)="imageCropped($event)"
+      (imageLoaded)="imageLoaded($event)"
+      (cropperReady)="cropperReady()"
+      (loadImageFailed)="loadImageFailed()"
+      ></image-cropper>
+    </div>
+
+    <div class="main__button">
+      <button (click)="saveImage()" class="main__btn">Save</button>
+    </div>
+
+    <div class="main__result">
+      <div class="main__block">
+        <div class="main__text">Check</div>
+        <img [src]="croppedImage">
+      </div>
+      <div class="main__block">
+        <div class="main__text">Saved</div>
+        <img [src]="localImage" class="main__img">
+      </div>
+    </div>
+    
+  </div>
+</div>
+  

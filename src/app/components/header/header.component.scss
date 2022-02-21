@@ -1,0 +1,15 @@
+.header {
+    margin: 0 auto;
+    max-width: 60%;
+    height: 80px;
+    background-color: rgb(70, 69, 69);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    &__title {
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        color: #FBCA1F;
+        text-shadow: 2px 2px 2px black;
+    }
+}
